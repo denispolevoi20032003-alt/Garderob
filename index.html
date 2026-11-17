@@ -160,9 +160,11 @@ html,body{touch-action:pan-x pan-y}input,select{font-size:16px!important}.prev{c
 }
 
 /* --- фикс: нижняя панель всегда прижата к низу экрана на iPhone --- */
+html{min-height:100%;-webkit-text-size-adjust:100%}
 html,body{max-width:100%;overflow-x:clip}
+body{min-height:100vh;min-height:100dvh}
 @media (max-width:899px){
- .tab{position:fixed!important;top:auto!important;bottom:calc(8px + env(safe-area-inset-bottom,0px))!important;transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0)}
+ .tab{position:fixed!important;top:auto!important;bottom:calc(6px + env(safe-area-inset-bottom,0px)*.4)!important;transform:translate3d(0,0,0);-webkit-transform:translate3d(0,0,0)}
 }
 </style></head><body><div id="app"></div>
 <script>
